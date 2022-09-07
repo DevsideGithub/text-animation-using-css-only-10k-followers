@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        html {
+            --color: red;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            font-family: 'Dosis', monospace;
+            font-weight: 900;
+            font-size: min(10vw, 125px);
+            text-align: center;
+            background-color: black;
+            color: #111;
+            text-shadow:
+                0 0 1px #00f2ff,
+                0 0 1px #00f2ff,
+                0 0 1px #00f2ff,
+                0 0 1px #00f2ff,
+                0 0 1px #00f2ff,
+                0 0 10px black;
+            perspective: 800px;
+        }
+
+        body {
+            animation: tilt 10s linear infinite;
+        }
+
+        @keyframes tilt {
+            25% {
+                transform: rotateX(18deg) rotateY(18deg);
+            }
+
+            50% {
+                transform: rotateX(18deg) rotateY(-18deg);
+            }
+
+            75% {
+                transform: rotateX(-18deg) rotateY(18deg);
+            }
+        }
+
+        span {
+            display: block;
+            font-size: min(25vw, 350px);
+            line-height: 65%;
+            color: transparent;
+            text-shadow:
+                0 0 1px var(--color),
+                0 0 50px var(--color),
+                0 0 100px var(--color);
+            animation: colorSwap 2s linear infinite;
+        }
+
+        @keyframes colorSwap {
+            25% {
+                --color: cyan;
+            }
+
+            50% {
+                --color: magenta;
+            }
+
+            75% {
+                --color: lime;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">
+    THANK YOU for
+    <SPAN>10k</SPAN>
+    FOLLOWERS
+</body>
+
+</html>
